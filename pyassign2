@@ -24,10 +24,13 @@ def test():#测试函数
     assert slice(exchange('USD','EUR','10'))=={'to':'8.63569 Euros','success':' : true, ','error':''}#测试对字符串的处理是否正确
     assert printf('USD','EUR','10')=='8.63569 Euros'#测试输出结果是否正确
     print('测试通过')
-test()
-x=input('currency_from:')#输入本来的货币
-y=input('currency_to:')#输入期望货币
-z=input('amount_from:')#输入钱数
-print(printf(x,y,z))
+def main():
+    test()
+    x=input('currency_from:')#输入本来的货币
+    y=input('currency_to:')#输入期望货币
+    z=input('amount_from:')#输入钱数
+    print(printf(x,y,z))
+if __name__ == '__main__':
+    main()
 
 
